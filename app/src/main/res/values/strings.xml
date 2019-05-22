@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MCE Energy</string>
+    <string name="device_not_available">Appareil bluetooth non disponible</string>
+</resources>
