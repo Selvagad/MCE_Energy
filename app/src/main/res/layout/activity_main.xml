@@ -5,24 +5,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DeviceList">
+    tools:context=".DeviceList"
+    android:background="@drawable/a41happyacid">
 
-   <ListView
-       android:layout_width="wrap_content"
-       android:layout_height="500dp"
-       android:id="@+id/list_device"
-       android:layout_marginTop="20dp">
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/linear_lay_listdevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:background="@android:color/white">
+        <TextView
+            android:paddingLeft="10dp"
+            android:id="@+id/header_list_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#666"
+            android:text="Liste des appareils"
+            android:textColor="@android:color/white"/>
+        <ListView
+            android:layout_below="@id/header_list_device"
+            android:id="@+id/list_device"
+            android:background="#111"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
 
-   </ListView>
+            android:divider="@android:drawable/divider_horizontal_bright"
+            android:dividerHeight="5dp"
+            tools:visibility="visible">
+
+        </ListView>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_pair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Actualiser"
-        android:layout_below="@id/list_device"
+        android:layout_below="@id/linear_lay_listdevice"
         android:layout_centerHorizontal="true"
-       />
+        />
 
 
 </RelativeLayout>
