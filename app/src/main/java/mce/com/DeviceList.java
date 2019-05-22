@@ -61,7 +61,7 @@ public class DeviceList extends AppCompatActivity {
                 list.add(bt.getName().toString() + "\n" + bt.getAddress().toString());
             }
         }else{
-            Toast.makeText(getApplicationContext(), "Pas d'appareils bluetooth trouvé", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Pas d'appareil bluetooth trouvé", Toast.LENGTH_LONG).show();
         }
 
         final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,list);
