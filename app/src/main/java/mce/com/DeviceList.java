@@ -42,7 +42,7 @@ public class DeviceList extends AppCompatActivity {
             Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(turnBTon, 1);
         }
-
+        pairedDeviceList();
         btn_pair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,26 +59,30 @@ public class DeviceList extends AppCompatActivity {
         if(paired_devices.size()>0){
             for (BluetoothDevice bt : paired_devices){
                 list.add(bt.getName().toString() + "\n" + bt.getAddress().toString());
+
             }
         }else{
             Toast.makeText(getApplicationContext(), "Pas d'appareil bluetooth trouvé", Toast.LENGTH_LONG).show();
         }
 
-        final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,list);
-        deviceList.setAdapter(adapter);
-        deviceList.setOnItemClickListener(clickOnAddress);
+        /** Putting the content of list into device_item (TextView) of lisrow.xml **/
+        deviceList.setAdapter(new ArrayAdapter<String>(this, R.layout.lisrow,R.id.device_item, list));
+
+        // Click on an address to connect to it
+        deviceList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String info = deviceList.getItemAtPosition(i).toString();
+                //get the address (6*2 char + 5 points)
+                String address = info.substring(info.length()-17);
+
+                Intent intent = new Intent(DeviceList.this, LedControl.class);
+                intent.putExtra(EXTRA_ADDRESS, address);
+                startActivity(intent);
+
+            }
+        });
     }
 
-    /** Click on an address to connect to it **/
-    private AdapterView.OnItemClickListener clickOnAddress = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
-            String info = ((TextView) view).getText().toString();
-            String address = info.substring(info.length()-17);
 
-            Intent intent = new Intent(DeviceList.this, LedControl.class);
-            intent.putExtra(EXTRA_ADDRESS, address);
-            startActivity(intent);
-        }
-    };
 }

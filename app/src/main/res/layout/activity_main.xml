@@ -11,11 +11,12 @@
     <LinearLayout
         android:layout_marginTop="5dp"
         android:id="@+id/linear_lay_listdevice"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="2dp"
         android:background="@android:color/white">
+
         <TextView
             android:paddingLeft="10dp"
             android:id="@+id/header_list_device"
@@ -24,18 +25,14 @@
             android:background="#666"
             android:text="Liste des appareils"
             android:textColor="@android:color/white"/>
+
         <ListView
-            android:layout_below="@id/header_list_device"
             android:id="@+id/list_device"
-            android:background="#111"
             android:layout_width="wrap_content"
-            android:layout_height="500dp"
+            android:layout_height="wrap_content"
+            android:background="#787878"/>
 
-            android:divider="@android:drawable/divider_horizontal_bright"
-            android:dividerHeight="5dp"
-            tools:visibility="visible">
 
-        </ListView>
     </LinearLayout>
 
     <Button

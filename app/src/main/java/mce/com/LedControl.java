@@ -33,8 +33,9 @@ public class LedControl extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent newint = getIntent();
-        address = newint.getStringExtra(DeviceList.EXTRA_ADDRESS);
+        //Intent newint = getIntent();
+        address = this.getIntent().getStringExtra(DeviceList.EXTRA_ADDRESS);
+
 
         setContentView(R.layout.activity_led_control);
 
