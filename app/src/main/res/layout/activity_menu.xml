@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu"
+    android:background="@drawable/a41happyacid">
+
+    <LinearLayout
+        android:id="@+id/layout_toolbar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_silhouette_grey"
+            android:layout_marginTop="10dp"
+            android:background="@null"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ma maison"
+            android:textSize="25dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="70dp"
+            android:textColor="@color/grey"/>
+
+        <!--<ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo_mce_toolbar_f"/>-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/line"
+        android:layout_below="@id/layout_toolbar_menu"
+        android:layout_marginTop="7dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_management"
+        android:layout_centerHorizontal="true"
+        android:layout_width="390dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/layout_toolbar_menu"
+        android:background="@drawable/shape"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/layout_management_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Gestion"
+            android:textSize="30dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="100dp"
+            android:textColor="@color/grey"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lamp_grey" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/thermometer_grey"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_simu"
+        android:layout_centerHorizontal="true"
+        android:layout_width="390dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/layout_management"
+        android:background="@drawable/shape"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/layout_simu_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Simulation"
+            android:textSize="30sp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="65dp"
+            android:textColor="@color/grey"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/power_cord_grey"
+            android:layout_marginRight="15dp"/>
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/settings_gears_grey"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_conso"
+        android:layout_centerHorizontal="true"
+        android:layout_width="390dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/layout_simu"
+        android:background="@drawable/shape"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/layout_conso_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Économie d'énergie"
+            android:textSize="30sp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/grey"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lightning_energy_grey"
+            android:layout_marginRight="15dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

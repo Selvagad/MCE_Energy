@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculConso"
+    android:background="@drawable/a41happyacid">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:id="@+id/layout_toolbar_calc_conso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/btn_back_calc_conso"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/btn_back"
+            android:background="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="60dp"
+            android:text="Économie d'énergie"
+            android:textColor="@color/grey"
+            android:textSize="20dp"
+            />
+
+        <!--<ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo_mce_toolbar_f"/>-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/line"
+        android:layout_below="@id/layout_toolbar_calc_conso"/>
+
+    <!-- Surface -->
+    <LinearLayout
+        android:id="@+id/layout_form"
+        android:layout_below="@id/layout_toolbar_calc_conso"
+        android:layout_width="370dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/layout_surface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surface : "
+                android:textSize="20dp"
+                android:textColor="@color/grey"/>
+
+            <EditText
+                android:id="@+id/numberPick_surface"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:inputType="number"
+                android:textColor="@color/grey"
+                android:gravity="center">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textColor="@color/grey"
+                android:text=" m²"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/params_conso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/layout_surface"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/layout_p_Led"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/p_led"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Utilisation de LED"
+                    android:textSize="@dimen/txt_params_conso"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_p_Ventil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <CheckBox
+                    android:id="@+id/p_ventil"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ventilateur plutôt que climatiseur"
+                    android:textSize="@dimen/txt_params_conso"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_p_Temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <CheckBox
+                    android:id="@+id/p_temp_eau"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baisser température de l'eau (10°C)"
+                    android:textSize="@dimen/txt_params_conso"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_p_Prise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <CheckBox
+                    android:id="@+id/p_veille"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prise qui éteint les appareils en veille"
+                    android:textSize="@dimen/txt_params_conso"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_p_Iso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <CheckBox
+                    android:id="@+id/p_isole"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logement bien isolé"
+                    android:textSize="@dimen/txt_params_conso"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_p_Seche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <CheckBox
+                    android:id="@+id/p_seche"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pas de sèche-linge"
+                    android:textSize="@dimen/txt_params_conso"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_p_Air"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <CheckBox
+                    android:id="@+id/p_aere"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aérer son logement tous les jours"
+                    android:textSize="@dimen/txt_params_conso"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_p_EquipA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <CheckBox
+                    android:id="@+id/p_ecoA"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Équipement éonomes (A++)"
+                    android:textSize="@dimen/txt_params_conso"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_calc_conso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_form"
+        android:layout_centerHorizontal="true"
+        android:text="Calculer"
+        android:layout_marginTop="15dp"/>
+
+
+
+
+</RelativeLayout>

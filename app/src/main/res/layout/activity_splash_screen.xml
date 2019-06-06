@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/logo_splash"
+        android:src="@drawable/logo_mce_toolbar_f"
          />
 
 </RelativeLayout >

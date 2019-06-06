@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Conso"
+    android:background="@drawable/a41happyacid">
+
+    <LinearLayout
+        android:id="@+id/layout_toolbar_conso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/btn_back_conso"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/btn_back"
+            android:background="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="60dp"
+            android:text="Économie d'énergie"
+            android:textColor="@color/grey"
+            android:textSize="20dp"
+            />
+
+        <!--<ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo_mce_toolbar_f"/>-->
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="8px"
+        android:background="@drawable/line"
+        android:layout_below="@id/layout_toolbar_conso"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_nb_w"
+        android:layout_width="260dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/layout_toolbar_conso"
+        android:background="@drawable/two_hand_consodece"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nb_Wh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:textColor="@color/grey"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="115dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kWh"
+            android:textSize="25dp"
+            android:textColor="@color/grey"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="100dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_eco_CO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_nb_w"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Économie CO2 :"
+            android:textColor="@color/grey"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/nb_eco_CO2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            android:text="kg"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_banquise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_eco_CO2"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surface de banquise sauvée :"
+            android:textColor="@color/grey"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/nb_banquise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@color/grey"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            android:text="m²"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package mce.com;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.bluetooth.BluetoothDevice;
@@ -12,6 +13,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.IOException;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -24,6 +28,9 @@ public class DeviceList extends AppCompatActivity {
     private BluetoothAdapter bluetooth_adapt = null;
     private Set<BluetoothDevice> paired_devices;
     public static String EXTRA_ADDRESS = "device_adress";
+    boolean stopThread;
+    byte buffer[];
+    private InputStream inputStream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,13 +83,14 @@ public class DeviceList extends AppCompatActivity {
                 //get the address (6*2 char + 5 points)
                 String address = info.substring(info.length()-17);
 
-                Intent intent = new Intent(DeviceList.this, LedControl.class);
+                Intent intent = new Intent(DeviceList.this, Menu.class);
                 intent.putExtra(EXTRA_ADDRESS, address);
                 startActivity(intent);
 
             }
         });
     }
+
 
 
 }

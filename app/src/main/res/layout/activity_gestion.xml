@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gestion"
+    android:background="@drawable/a41happyacid">
+
+    <RelativeLayout
+        android:id="@+id/layout_toolbar_gestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp">
+        <ImageButton
+            android:id="@+id/btn_back_gestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_back"
+            android:background="@null"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maison"
+            android:textColor="@color/grey"
+            android:textSize="25dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@id/layout_toolbar_gestion">
+        <!-- 3 params -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+            <!-- Lumière -->
+            <LinearLayout
+                android:id="@+id/layout_lumiere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/layout_toolbar_gestion"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lumière"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"/>
+                <LinearLayout
+                    android:layout_width="370dp"
+                    android:layout_height="290dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rectangle2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Salon"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_lum_salon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="100dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Cuisine"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_lum_cuisine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="85dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Chambre 1"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_lum_ch1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="55dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Chambre 2"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_lum_ch2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="55dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Salle de bain"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_lum_sdb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Volets -->
+            <LinearLayout
+                android:id="@+id/layout_volet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volets"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"/>
+                <LinearLayout
+                    android:layout_width="370dp"
+                    android:layout_height="348dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rectangle2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Cuisine 1"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_volet_cuisine1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Cuisine 2"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_lum_cuisine2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Chambre 1"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_volet_ch1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="55dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Chambre 2"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_volet_ch2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="55dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Salon 1"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_volet_salon1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="85dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Salon 2"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_volet_salon2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="85dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Chauffage -->
+            <LinearLayout
+                android:id="@+id/layout_chauffage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chauffages"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"/>
+                <LinearLayout
+                    android:layout_width="370dp"
+                    android:layout_height="290dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rectangle2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Cuisine  "
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_chauf_cuisine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="75dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Salon"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_chauf_salon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="100dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Chambre 1"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_chauf_ch1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="52dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Chambre 2"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_chauf_ch2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="55dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Salle de bain"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_chauf_sdb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="38dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--VMC -->
+            <LinearLayout
+                android:id="@+id/layout_vmc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VMC"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"/>
+                <LinearLayout
+                    android:layout_width="370dp"
+                    android:layout_height="116dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rectangle2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Couloir"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_vmc_couloir"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="85dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/line_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="21dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ampoule"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Serre"
+                                android:textColor="@color/grey"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="25dp"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_vmc_serre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="102dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="false"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
