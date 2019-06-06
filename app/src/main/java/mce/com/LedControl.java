@@ -61,8 +61,7 @@ public class LedControl extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.txtView_DataBT);
 
         //Create btConnect Task to establish BT Connection and setup BT Socket
-        ConnectBT btConnect = new ConnectBT();
-        btConnect.execute();
+        new ConnectBT().execute();
 
 //        try {
 //            m_inputStream = m_btSocket.getInputStream();

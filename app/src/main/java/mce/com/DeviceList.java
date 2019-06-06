@@ -1,7 +1,7 @@
 package mce.com;
 
 import android.content.Intent;
-import android.os.Handler;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.bluetooth.BluetoothDevice;
@@ -13,9 +13,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
+
+
+
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -28,9 +28,9 @@ public class DeviceList extends AppCompatActivity {
     private BluetoothAdapter bluetooth_adapt = null;
     private Set<BluetoothDevice> paired_devices;
     public static String EXTRA_ADDRESS = "device_adress";
-    boolean stopThread;
-    byte buffer[];
-    private InputStream inputStream;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class DeviceList extends AppCompatActivity {
             Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(turnBTon, 1);
         }
-        pairedDeviceList();
+
         btn_pair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,28 +69,31 @@ public class DeviceList extends AppCompatActivity {
 
             }
         }else{
-            Toast.makeText(getApplicationContext(), "Pas d'appareil bluetooth trouvé", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Pas d'appareils bluetooth trouvé", Toast.LENGTH_LONG).show();
         }
 
-        /** Putting the content of list into device_item (TextView) of lisrow.xml **/
-        deviceList.setAdapter(new ArrayAdapter<String>(this, R.layout.lisrow,R.id.device_item, list));
 
-        // Click on an address to connect to it
-        deviceList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String info = deviceList.getItemAtPosition(i).toString();
-                //get the address (6*2 char + 5 points)
-                String address = info.substring(info.length()-17);
-
-                Intent intent = new Intent(DeviceList.this, Gestion.class);
-                intent.putExtra(EXTRA_ADDRESS, address);
-                startActivity(intent);
-
-            }
-        });
+        final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,list);
+        deviceList.setAdapter(adapter);
+        deviceList.setOnItemClickListener(clickOnAddress);
     }
 
+    /** Click on an address to connect to it **/
+    private AdapterView.OnItemClickListener clickOnAddress = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+            String info = ((TextView) view).getText().toString();
 
+            String address = info.substring(info.length()-17);
 
+            Intent intent = new Intent(DeviceList.this, Gestion.class);
+            intent.putExtra(EXTRA_ADDRESS, address);
+            startActivity(intent);
+
+        }
+    };
 }
+
+
+
+
