@@ -83,7 +83,7 @@ public class DeviceList extends AppCompatActivity {
                 //get the address (6*2 char + 5 points)
                 String address = info.substring(info.length()-17);
 
-                Intent intent = new Intent(DeviceList.this, Menu.class);
+                Intent intent = new Intent(DeviceList.this, Gestion.class);
                 intent.putExtra(EXTRA_ADDRESS, address);
                 startActivity(intent);
 

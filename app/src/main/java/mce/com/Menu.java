@@ -27,8 +27,8 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),address,Toast.LENGTH_LONG).show();
-//               Intent i = new Intent(getApplicationContext(),Gestion.class);
-//               startActivity(i);
+               Intent i = new Intent(getApplicationContext(),DeviceList.class);
+               startActivity(i);
             }
         });
 

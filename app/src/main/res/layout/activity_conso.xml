@@ -48,8 +48,8 @@
 
     <LinearLayout
         android:id="@+id/layout_nb_w"
-        android:layout_width="260dp"
-        android:layout_height="250dp"
+        android:layout_width="500dp"
+        android:layout_height="350dp"
         android:layout_below="@id/layout_toolbar_conso"
         android:background="@drawable/two_hand_consodece"
         android:layout_centerHorizontal="true"
@@ -57,21 +57,22 @@
 
         <TextView
             android:id="@+id/nb_Wh"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:textSize="35dp"
             android:textColor="@color/grey"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="115dp"
+            android:layout_marginTop="100dp"
+            android:text="28000.02"
             android:textStyle="bold"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="kWh"
             android:textSize="25dp"
             android:textColor="@color/grey"
             android:layout_marginTop="1dp"
-            android:layout_marginLeft="100dp"/>
+            android:gravity="center"/>
 
     </LinearLayout>
 
@@ -81,8 +82,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/layout_nb_w"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginLeft="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -137,6 +137,13 @@
             android:textColor="@color/grey"
             android:textStyle="bold"
             android:text="m²"/>
+
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/ours"
+        android:layout_below="@id/layout_banquise"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
