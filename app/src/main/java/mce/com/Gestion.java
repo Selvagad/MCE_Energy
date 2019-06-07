@@ -14,6 +14,7 @@ import android.support.v7.widget.SwitchCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,8 @@ import java.util.UUID;
 public class Gestion extends AppCompatActivity {
 
     Button btn1, btn2, btn3, btn4, btn5, btnDis;
-    SwitchCompat lum1;
+    ImageButton btn_back;
+    SwitchCompat lum1,lum2,lum3,lum4,lum5,shu1,shu2,shu3,shu4,shu5,shu6,heat1,heat2,heat3,heat4,heat5,vmc1,vmc2;
     String address = null;
     TextView lumn, textView;
     private ProgressDialog progress;
@@ -60,6 +62,33 @@ public class Gestion extends AppCompatActivity {
         new ConnectBT().execute();
 
         lum1 = findViewById(R.id.switch_lum_cuisine);
+        lum2= findViewById(R.id.switch_lum_salon);
+        lum3= findViewById(R.id.switch_lum_ch1);
+        lum4= findViewById(R.id.switch_lum_ch2);
+        lum5= findViewById(R.id.switch_lum_sdb);
+        shu1= findViewById(R.id.switch_volet_cuisine1);
+        shu2= findViewById(R.id.switch_volet_cuisine2);
+        shu3= findViewById(R.id.switch_volet_salon1);
+        shu4= findViewById(R.id.switch_volet_salon2);
+        shu5= findViewById(R.id.switch_volet_ch1);
+        shu6= findViewById(R.id.switch_volet_ch2);
+        heat1= findViewById(R.id.switch_chauf_cuisine);
+        heat2= findViewById(R.id.switch_chauf_salon);
+        heat3= findViewById(R.id.switch_chauf_ch1);
+        heat4= findViewById(R.id.switch_chauf_ch2);
+        heat5= findViewById(R.id.switch_chauf_sdb);
+        vmc1= findViewById(R.id.switch_vmc_couloir);
+        vmc2= findViewById(R.id.switch_vmc_serre);
+        btn_back = findViewById(R.id.btn_back_gestion);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("STOP");
+                Disconnect();
+            }
+        });
+
 
         lum1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +96,125 @@ public class Gestion extends AppCompatActivity {
                 sendSignal("SetLum1");
             }
         });
+
+        lum2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetLum2");
+            }
+        });
+
+        lum3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetLum3");
+            }
+        });
+
+        lum4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetLum4");
+            }
+        });
+
+        lum5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetLum5");
+            }
+        });
+
+        shu1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetShu1");
+            }
+        });
+
+        shu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetShu2");
+            }
+        });
+
+        shu3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetShu3");
+            }
+        });
+
+        shu4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetShu4");
+            }
+        });
+        shu5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetShu5");
+            }
+        });
+
+        shu6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetShu6");
+            }
+        });
+
+        heat1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetHeat1");
+            }
+        });
+
+        heat2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetHeat2");
+            }
+        });
+
+        heat3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetHeat3");
+            }
+        });
+
+        heat4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetHeat4");
+            }
+        });
+
+        heat5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetHeat5");
+            }
+        });
+
+        vmc1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetVmc1");
+            }
+        });
+
+        vmc2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSignal("SetVmc2");
+            }
+        });
+
 
 //        try {
 //            m_inputStream = m_btSocket.getInputStream();

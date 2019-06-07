@@ -49,6 +49,7 @@ public class DeviceList extends AppCompatActivity {
             Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(turnBTon, 1);
         }
+        pairedDeviceList();
 
         btn_pair.setOnClickListener(new View.OnClickListener() {
             @Override

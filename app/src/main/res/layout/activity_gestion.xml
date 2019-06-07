@@ -356,7 +356,7 @@
                                 android:layout_marginLeft="25dp"/>
 
                             <android.support.v7.widget.SwitchCompat
-                                android:id="@+id/switch_lum_cuisine2"
+                                android:id="@+id/switch_volet_cuisine2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="70dp"
