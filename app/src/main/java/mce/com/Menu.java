@@ -35,8 +35,8 @@ public class Menu extends AppCompatActivity {
         simu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent i = new Intent(getApplicationContext(),Gestion.class);
-              //  startActivity(i);
+                Intent i = new Intent(getApplicationContext(),Device_list_Scenario.class);
+                startActivity(i);
             }
         });
 

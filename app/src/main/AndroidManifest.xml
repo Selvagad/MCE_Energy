@@ -12,8 +12,14 @@
         android:roundIcon="@mipmap/mce_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Gestion"
+        <activity android:name=".Device_list_Scenario"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".Simulation"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Gestion"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Conso"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -37,9 +43,6 @@
         <activity
             android:name=".DeviceList"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-
     </application>
-
 
 </manifest>

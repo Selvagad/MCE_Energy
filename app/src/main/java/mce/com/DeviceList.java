@@ -89,6 +89,7 @@ public class DeviceList extends AppCompatActivity {
 
             Intent intent = new Intent(DeviceList.this, Gestion.class);
             intent.putExtra(EXTRA_ADDRESS, address);
+            DeviceList.this.finish();
             startActivity(intent);
 
         }

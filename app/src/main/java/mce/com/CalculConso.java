@@ -87,8 +87,8 @@ public class CalculConso extends AppCompatActivity {
         }
 
         if (ventil.isChecked()){
-            nrj_eco_A = nrj_eco_A + 91.0;
-            nrj_eco_F = nrj_eco_F + 468.0;
+            nrj_eco_A = nrj_eco_A + 476.0;
+            nrj_eco_F = nrj_eco_F + 2127.0;
         }
 
         if (temp_eau.isChecked()){
@@ -117,7 +117,7 @@ public class CalculConso extends AppCompatActivity {
             coef = 1.1;
 
         if(ecoA.isChecked())
-            nrj_eco = nrj_eco_A + 3874.0;
+            nrj_eco = nrj_eco_A + 5148.0;
 	    else
 	        nrj_eco = nrj_eco_F;
 

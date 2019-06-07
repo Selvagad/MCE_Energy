@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeviceList"
+    android:background="@drawable/a41happyacid">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/linear_lay_listdevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:id="@+id/header_list_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#666"
+            android:text="Liste des appareils"
+            android:textColor="@android:color/white"/>
+
+        <ListView
+            android:id="@+id/list_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#787878"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualiser"
+        android:layout_below="@id/linear_lay_listdevice"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>

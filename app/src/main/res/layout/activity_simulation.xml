@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Simulation"
+    android:background="@drawable/a41happyacid">
+
+    <LinearLayout
+        android:id="@+id/layout_toolbar_scenario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/btn_back_scenario"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/btn_back"
+            android:background="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="120dp"
+            android:text="Scénario"
+            android:textColor="@color/grey"
+            android:textSize="20dp"
+            />
+
+        <!--<ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo_mce_toolbar_f"/>-->
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="8px"
+        android:background="@drawable/line"
+        android:layout_below="@id/layout_toolbar_scenario"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/layout_toolbar_scenario">
+
+        <LinearLayout
+            android:id="@+id/layout_scenario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/layout_toolbar_scenario"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="232dp"
+                android:orientation="vertical"
+                android:background="@drawable/rectangle2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ampoule"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="30dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:text="Chauffer la journée"
+                            android:textColor="@color/grey"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="25dp"/>
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/switch_scen_chauJ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="10dp"
+                            android:checked="false"
+                            android:theme="@style/MySwitch" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/line_light"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ampoule"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="30dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:text="Chauffer la nuit"
+                            android:textColor="@color/grey"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="25dp"/>
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/switch_scen_chauN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="85dp"
+                            android:layout_marginTop="10dp"
+                            android:checked="false"
+                            android:theme="@style/MySwitch" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/line_light"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ampoule"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="30dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:text="Refroidir la journée"
+                            android:textColor="@color/grey"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="25dp"/>
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/switch_scen_RefJ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="55dp"
+                            android:layout_marginTop="10dp"
+                            android:checked="false"
+                            android:theme="@style/MySwitch" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/line_light"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ampoule"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="30dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:text="Refroidir la nuit"
+                            android:textColor="@color/grey"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="25dp"/>
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/switch_scen_RefN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="87dp"
+                            android:layout_marginTop="10dp"
+                            android:checked="false"
+                            android:theme="@style/MySwitch" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
